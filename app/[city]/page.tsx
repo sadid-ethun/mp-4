@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { fetchWeatherData } from "../../lib/fetchWeatherData";
 
-export default async function WeatherPage({
-	params,
-}: {
-	params: { city: string };
-}) {
+interface PageProps {
+	params: Promise<{ city: string }>;
+}
+
+export default async function WeatherPage({ params }: PageProps) {
 	const { city } = await params
 	const cityName = decodeURIComponent(city);
 	const weather = await fetchWeatherData(cityName);
