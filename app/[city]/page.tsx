@@ -5,7 +5,7 @@ export default async function WeatherPage({
 	params,
 }: {
 	params: { city: string };
-}): Promise<any> {
+}): Promise<JSX.Element> {
 	const { city } = await params
 	const cityName = decodeURIComponent(city);
 	const weather = await fetchWeatherData(cityName);
