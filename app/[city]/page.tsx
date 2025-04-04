@@ -1,4 +1,3 @@
-import { WeatherResponse } from "../../types";
 import Link from "next/link";
 import { fetchWeatherData } from "../../lib/fetchWeatherData";
 
