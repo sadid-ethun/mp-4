@@ -1,6 +1,6 @@
 import { WeatherResponse } from "../types";
 
-export async function fetchWeatherData(cityName: string): Promise<WeatherResponse | null> {
+export async function fetchWeatherData(cityName: string) {
     try {
         const API_KEY = process.env.WEATHER_API_KEY;
         const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(
