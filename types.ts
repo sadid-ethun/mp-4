@@ -7,12 +7,9 @@ export interface DayForecast {
 	humidity: number;
 	windspeed: number;
 	conditions: string;
-	description: string;
-	precipprob: number;
 }
 
 export interface WeatherResponse {
-	address: string;
-	currentConditions: DayForecast;
+	resolvedAddress: string;
 	days: DayForecast[];
 }
