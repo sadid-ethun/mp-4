@@ -6,7 +6,7 @@ export default async function WeatherPage({
 }: {
 	params: { city: string };
 }) {
-	const { city } = await Promise.resolve(params);
+	const { city } = await params
 	const cityName = decodeURIComponent(city);
 	const weather = await fetchWeatherData(cityName);
 
